@@ -1,3 +1,5 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,8 +12,12 @@
 
 <body>
     <h1>HAA Enterprises Home Page</h1>
-    <br />
+    <hr>
     <p>Welcome to HAA Enterprises home page. Comming soon...</p>
+
+    <form:form action="logout" method="POST">
+        <input type="submit" value="Logout">
+    </form:form>
 </body>
 
 </html>

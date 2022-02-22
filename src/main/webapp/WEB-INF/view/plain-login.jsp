@@ -14,6 +14,10 @@
         .failed {
             color: red;
         }
+
+        .success {
+            color: green;
+        }
     </style>
 </head>
 
@@ -24,6 +28,12 @@
         <c:if test="${param.error != null}">
             <em class="failed">
                 Sorry!! You have Entered invalid username/password
+            </em>
+        </c:if>
+
+        <c:if test="${param.logout != null}">
+            <em class="success">
+                You have been logged out
             </em>
         </c:if>
 
