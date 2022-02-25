@@ -26,15 +26,20 @@
         <security:authentication property="principal.authorities" />
 
     </p>
-    <hr>
-    <p>
-        <a href="leaders">Leadership Meeting</a>
-        (Only for Manager Peeps)
-    </p>
-    <p>
-        <a href="systems">IT Systems Meeting</a>
-        (Only for Admin Peeps)
-    </p>
+
+    <security:authorize access="hasRole('MANAGER')">
+        <p>
+            <a href="leaders">Leadership Meeting</a>
+            (Only for Manager Peeps)
+        </p>
+    </security:authorize>
+
+    <security:authorize access="hasRole('ADMIN')">
+        <p>
+            <a href="systems">IT Systems Meeting</a>
+            (Only for Admin Peeps)
+        </p>
+    </security:authorize>
     <hr>
 
     <form:form action="logout" method="POST">
