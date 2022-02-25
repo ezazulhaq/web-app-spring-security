@@ -13,4 +13,9 @@ public class HomeController {
     public String welcome(Model theModel) {
         return "home";
     }
+
+    @GetMapping("/leaders")
+    public String showLeaders(Model theModel) {
+        return "leaders";
+    }
 }
