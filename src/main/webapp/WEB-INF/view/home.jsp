@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +15,18 @@
     <h1>HAA Enterprises Home Page</h1>
     <hr>
     <p>Welcome to HAA Enterprises home page. Comming soon...</p>
+
+    <hr>
+    <p>
+        User:
+        <security:authentication property="principal.username" />
+
+        <br><br>
+        Role(s):
+        <security:authentication property="principal.authorities" />
+
+    </p>
+    <hr>
 
     <form:form action="logout" method="POST">
         <input type="submit" value="Logout">
