@@ -20,7 +20,7 @@
     </p>
 
     <hr>
-    <a href="home">Back to Home Page</a>
+    <a href="/">Back to Home Page</a>
 </body>
 
 </html>
