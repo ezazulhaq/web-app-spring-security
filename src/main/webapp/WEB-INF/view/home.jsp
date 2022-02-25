@@ -27,6 +27,11 @@
 
     </p>
     <hr>
+    <p>
+        <a href="leaders">Leadership Meeting</a>
+        (Only for Manager Peeps)
+    </p>
+    <hr>
 
     <form:form action="logout" method="POST">
         <input type="submit" value="Logout">
