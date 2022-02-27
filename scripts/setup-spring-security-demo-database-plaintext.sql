@@ -22,6 +22,7 @@ VALUES
   --
   DROP TABLE IF EXISTS `authorities`;
 CREATE TABLE `authorities` (
+    `user_roles_id` int(10) PRIMARY KEY,
     `username` varchar(50) NOT NULL,
     `authority` varchar(50) NOT NULL,
     UNIQUE KEY `authorities_idx_1` (`username`, `authority`),
@@ -33,8 +34,8 @@ CREATE TABLE `authorities` (
 INSERT INTO
   `authorities`
 VALUES
-  ('john', 'ROLE_EMPLOYEE'),
-  ('mary', 'ROLE_EMPLOYEE'),
-  ('mary', 'ROLE_MANAGER'),
-  ('susan', 'ROLE_EMPLOYEE'),
-  ('susan', 'ROLE_ADMIN');
+  ('1', 'john', 'ROLE_EMPLOYEE'),
+  ('2', 'mary', 'ROLE_EMPLOYEE'),
+  ('3', 'mary', 'ROLE_MANAGER'),
+  ('4', 'susan', 'ROLE_EMPLOYEE'),
+  ('5', 'susan', 'ROLE_ADMIN');
